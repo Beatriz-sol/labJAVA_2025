@@ -22,8 +22,8 @@ public class Espetaculo {
 
         System.out.printf("Lucro de 23%%: %d\n",quantidadesConvite23);
 
-
+        entrada.close(); 
     }
 
-    
+         
 }
