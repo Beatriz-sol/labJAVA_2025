@@ -2,7 +2,7 @@ public class TesteRelogio {
 
     public static void main(String[] args) throws InterruptedException {
 
-        RelogioDigital relogio = new RelogioDigital(23, 59, 59);
+        RelogioDigital relogio = new RelogioDigital(23, 59, 57);
 
         System.out.println("Horário inicial: " + relogio.getHorario());
 
@@ -10,7 +10,7 @@ public class TesteRelogio {
         
         int i = 0;
         
-        while (i < 2) {
+        while (i < 3) {
 
             Thread.sleep(100);
 
