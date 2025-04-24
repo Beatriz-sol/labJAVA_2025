@@ -6,7 +6,7 @@ public class RelogioDigital{
     private int segundo;
 
     //contrutores
-    public RelogioDigital (int hora, int minuto, int segundo){
+    public RelogioDigital (){
         setHora(hora);
         setMinuto(minuto);
         setSegundo(segundo);
