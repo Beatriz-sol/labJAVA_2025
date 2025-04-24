@@ -23,7 +23,9 @@ public class RelogioDigital{
     }
 
     public void setHora (int hora){
-        this.hora = hora;
+        if (hora >= 0 && hora <= 23){
+        this.hora = hora;   
+        }        
     }
 
     public int getMinuto(){
@@ -31,7 +33,9 @@ public class RelogioDigital{
     }
 
     public void setMinuto (int minuto){
+        if (minuto >= 0 && minuto <= 59){
         this.minuto = minuto;
+        }
     }
 
     public int getSegundo(){
@@ -39,9 +43,63 @@ public class RelogioDigital{
     }
 
     public void setSegundo (int segundo){
-        this.segundo = segundo;
+        if (segundo >= 0 && segundo <= 59){
+            this.segundo = segundo;
+            }
     }
+
+    //public String getHorario () {
+
+        //String horaForm = "" + hora;
+       // String minutoForm = "" + minuto;
+        //String segundoForm = "" + segundo ;
+
+        //if (hora<10){
+           // horaForm = "0" + hora;
+       // }
+
+        //if (minuto<10){
+           // minutoForm = "0" + minuto;
+       // }
+
+       // if (segundo<10){
+          //  segundoForm = "0" + segundo; 
+       // }
+
+        //return horaForm + ":" + minutoForm + ":" +segundoForm;
+
+    //}
+
+    public String getHorario() {
+
+        return String.format("%02d:%02d:%02d", hora, minuto, segundo);
+    }
+
+    public void tick() {
+        segundo ++;
+
+        if (segundo > 59) {
+            segundo = 0;
+            minuto++;
+        }
+    
+            if (minuto > 59) {
+                minuto = 0;
+                hora++;
+        }
+                
+                if (hora > 23) {
+                    hora = 0;
+                    
+        }
+    
+
+
+
+
+
 
 
     
+}
 }
